@@ -1,0 +1,289 @@
+/* animations */
+
+@keyframes fadeInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(300px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes fadeInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(300px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+
+.fadeInBottom {
+  animation: 1.5s fadeInBottom;
+}
+
+.fadeInLeft {
+  animation: 1.5s fadeInLeft;
+}
+
+.fadeInTop {
+  animation: 1.5s fadeInTop;
+}
+
+
+.transparent{
+  background: transparent;
+}
+
+/* layout */
+
+.classicalPage {
+  padding-left: 10.3125rem;
+  padding-right: 10.3125rem;
+  margin-bottom: 380px;
+}
+
+.contactPage {
+  padding-left: 10.3125rem;
+  padding-right: 10.3125rem;
+  margin-bottom: 160px;
+}
+
+/* classes */
+
+/* transparent placeholder:text-white placeholder:text-opacity-50 border-b border-b-white pb-3 */
+.inputContact{
+  background: transparent;
+  border-bottom: 1px solid white;
+  padding-bottom: 0.75rem;
+  
+}
+
+.inputContact:focus{
+  outline: none;
+}
+
+.inputContact::placeholder{
+  color: white;
+  opacity: 0.5;
+  padding-left: 1rem;
+}
+
+.card {
+  padding: 2em;
+}
+
+.maskImage {
+  mask-image: none;
+}
+
+.effectHoverCardLink:hover {
+  cursor: pointer;
+}
+
+.effectHoverCardLink {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  border-radius: 0.5rem;
+  background-size: cover;
+  background-position: center;
+}
+
+.effectHoverCardLink::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5rem;
+  content: '';
+}
+
+.effectHoverCardLink:hover::before {
+  background-color: #e7816b;
+  opacity: 0.5;
+  transition-duration: 100ms;
+  transition-timing-function: ease-in-out;
+}
+
+.cardLink {
+  min-height: 308px;
+  grid-column: span 1 / span 1;
+}
+
+.cardLinkContainer {
+  display: grid;
+  margin-top: 10rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3rem;
+}
+
+.cardContainerLarge {
+  min-height: 640px;
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+}
+
+.cardLinkContainerSmall {
+  min-height: 320px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.footerContactContainer {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%) translateY(-75%);
+  background-color: #e7816b;
+  width: 78%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0.5rem;
+  padding: 72px 95px;
+  color: white;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.navLinks {
+  background-color: var(--dark);
+  display: flex;
+  gap: 3rem;
+}
+
+.footerIconList {
+  display: flex;
+  gap: 3rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: white;
+}
+
+@media screen and (max-width: 1024px) {
+  .maskImage {
+    mask-image: linear-gradient(
+      rgb(0 0 0 / 30%),
+      rgb(0 0 0 / 0%),
+      rgb(0 0 0 / 0%)
+    );
+  }
+
+  .cardLinkContainer {
+    margin-top: 8rem;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+  }
+
+  .cardLink {
+    min-height: 200px;
+  }
+
+  .footerContactContainer {
+    width: 90%;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* layout */
+
+  .classicalPage {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 330px;
+  }
+
+  .contactPage {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 120px;
+  }
+
+  .fadeInBottom {
+    animation: none;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .maskImage {
+    mask-image: none;
+  }
+
+  .cardLinkContainer {
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+    gap: 1.5rem;
+    min-height: 250px;
+  }
+
+  .cardLink {
+    min-height: 250px;
+  }
+
+  .navLinks {
+    position: absolute;
+    left: 0;
+    z-index: 50;
+    width: 100%;
+    flex-direction: column;
+    background-color: #000000;
+    color: #ffffff;
+    transition: opacity 0.5s ease-in;
+    padding: 12px;
+    font-size: 2rem;
+    letter-spacing: 0.1em;
+    gap: 2rem;
+    padding: 3rem 1.5rem;
+    font-size: 25px;
+  }
+
+  .footerContactContainer {
+    padding: 4rem 1.5rem;
+  }
+  .footerIconList {
+    width: 100%;
+    flex-direction: column;
+    gap: 2rem;
+    border-top: 1px;
+    border-color: #333136;
+    padding-top: 32px;
+    text-align: center;
+  }
+
+  /* layout */
+
+  .classicalPage {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 311px;
+  }
+
+  .contactPage {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+}
