@@ -13,11 +13,6 @@ const CardLink = ({ title, subtitle, className, link }: CardLinkProps) => {
   const navigate = useNavigate();
   const redirectOnButtonClick = () => {
     navigate(link);
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'smooth',
-    });
   };
 
   return (
