@@ -14,8 +14,8 @@ const HeaderHome = () => {
           fully responsive websites, app design, and engaging brand experiences.
           Find out more about our services.
         </p>
-        <Button link="./about" className="md:mx-auto">
-          <p className="tracking-wide">Learn More</p>
+        <Button link="./about" className="md:mx-auto tracking-wide">
+          Learn More
         </Button>
       </div>
       <div>
