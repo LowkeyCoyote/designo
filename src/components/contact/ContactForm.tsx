@@ -18,7 +18,7 @@ const ContactForm = () => {
     mode: 'onChange',
     reValidateMode: 'onSubmit',
   });
-   const onSubmit =  () =>  window.location.reload() ;
+  const onSubmit = () => window.location.reload();
 
   return (
     <form

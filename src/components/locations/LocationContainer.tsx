@@ -53,12 +53,3 @@ const LocationContainer = ({
 };
 
 export default LocationContainer;
-
-/*
-
-
-
-
-
-
-*/

@@ -2,9 +2,23 @@ import Banner from '@components/shared/Banner'
 import CardProduct from '@components/shared/CardProduct'
 import CardLink from '@components/shared/CardLink'
 
+import useIsMobile from '@hooks/useIsMobile'
+import useIsTablet from '@hooks/useIsTablet'
+
+import AppDesignImgDesktop from "@assets/shared/image-app-design.jpg"
+import AppDesignImgTablet from "@assets/shared/image-app-design-tablet.jpg"
+import AppDesignImgMobile from "@assets/shared/image-app-design-mobile.jpg"
+
+import graphicDesignDesktop from "@assets/shared/image-graphic-design.jpg"
+import graphicDesignTablet from "@assets/shared/image-graphic-design-tablet.jpg"
+import graphicDesignMobile from "@assets/shared/image-graphic-design-mobile.jpg"
+
 import { arrayWebDesignProductCard } from '@datas/webDesignProducts'
 
 const WebDesignPage = () => {
+
+  let isTablet = useIsTablet();
+  let isMobile = useIsMobile();
   return (
     <section className='classicalPage'>
       <Banner
@@ -30,15 +44,18 @@ const WebDesignPage = () => {
         <CardLink
           title="App Design"
           subtitle="view projects"
-          className="cardLink bg-app-design  md:bg-app-design-tablet sm:bg-app-design-mobile"
+          className="cardLink row-span-1"
           link="/app-design"
+          image={(!isMobile && isTablet ? AppDesignImgTablet : (isMobile) ? AppDesignImgMobile : AppDesignImgDesktop )}
+          altText={(!isMobile && isTablet ? 'app design tablet' : (isMobile) ? 'app design mobile' : 'app design desktop' )}
         />
         <CardLink
           title="Graphic Design"
           subtitle="view projects"
-          className="cardLink bg-graphic-design   md:bg-graphic-design-tablet sm:bg-graphic-design-mobile"
+          className="cardLink row-span-1  "
           link="/graphic-design"
-        />
+          image={(!isMobile && isTablet ? graphicDesignTablet : (isMobile) ? graphicDesignMobile : graphicDesignDesktop )}
+          altText={(!isMobile && isTablet ? 'graphic design tablet' : (isMobile) ? 'graphic design mobile' : 'graphic design desktop' )}/>
       </div>
     </section>
   )

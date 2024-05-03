@@ -1,9 +1,13 @@
-import heroImageAbout from '@assets/about/image-about-hero.jpg';
+import heroImageAboutDesktop from '@assets/about/image-about-hero-desktop.jpg';
+import heroImageAboutTablet from "@assets/about/image-about-hero-tablet.jpg";
 import heroImageAboutMobile from '@assets/about/image-about-hero-mobile.jpg';
+
 import useIsMobile from '@hooks/useIsMobile';
+import useIsTablet from '@hooks/useIsTablet';
 
 const HeroAbout = () => {
   let isMobile = useIsMobile();
+  let isTablet = useIsTablet();
 
   return (
     <div className="flex flex-row overflow-hidden rounded-lg md:flex-col-reverse sm:rounded-none">
@@ -18,9 +22,8 @@ const HeroAbout = () => {
         </p>
       </div>
       <img
-        src={isMobile ? heroImageAboutMobile : heroImageAbout}
-        alt={isMobile ? 'Hero About Mobile' : 'Hero About Desktop'}
-        className="object-cover"
+        src={(!isMobile && isTablet ? heroImageAboutTablet : (isMobile) ? heroImageAboutMobile : heroImageAboutDesktop )}
+        alt={(!isMobile && isTablet ? 'hero about tablet' : (isMobile) ? 'hero About Mobile' : 'hero Image desktop' )}
       />
     </div>
   );

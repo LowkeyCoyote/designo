@@ -1,8 +1,6 @@
 import ContactForm from "@components/contact/ContactForm";
 
-
 const ContactContainer = () => {
-
   return (
     <div className="flex items-center rounded-lg bg-peach px-24 py-14 
     bg-intro-contact bg-no-repeat bg-left-top md:flex-col md:gap-10 md:px-12 md:py-[72px]

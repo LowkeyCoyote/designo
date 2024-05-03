@@ -1,12 +1,32 @@
 import HeaderHome from '@components/home/HeroHome'
 import CardLink from '@components/shared/CardLink'
 
+import useIsMobile from '@hooks/useIsMobile'
+import useIsTablet from '@hooks/useIsTablet'
+
 import passionateImg from '@assets/home/illustration-passionate.svg'
 import friendlyImg from '@assets/home/illustration-friendly.svg'
 import resourcefulImg from '@assets/home/illustration-resourceful.svg'
 import QualityHome from '@components/home/QualityHome'
 
+import WebDesignImgDesktopLarge from "@assets/shared/image-web-design-large.jpg"
+import WebDesignImgTablet from "@assets/shared/image-web-design-tablet.jpg"
+import WebDesignImgMobile from "@assets/shared/image-web-design-mobile.jpg"
+
+import AppDesignImgDesktop from "@assets/shared/image-app-design.jpg"
+import AppDesignImgTablet from "@assets/shared/image-app-design-tablet.jpg"
+import AppDesignImgMobile from "@assets/shared/image-app-design-mobile.jpg"
+
+import graphicDesignDesktop from "@assets/shared/image-graphic-design.jpg"
+import graphicDesignTablet from "@assets/shared/image-graphic-design-tablet.jpg"
+import graphicDesignMobile from "@assets/shared/image-graphic-design-mobile.jpg"
+
+
+
 const HomePage = () => {
+
+  let isTablet = useIsTablet();
+  let isMobile = useIsMobile();
   return (
     <section className='classicalPage'>
       <HeaderHome />
@@ -14,20 +34,26 @@ const HomePage = () => {
         <CardLink
           title="Web Design"
           subtitle="view projects"
-          className="cardLink row-span-2 bg-web-design-large md:bg-web-design-tablet sm:bg-web-design-mobile"
+          className="cardLink row-span-2 min-h-[640px] md:min-h-[200px] sm:min-h-[250px]"
           link="./web-design"
+          image={(!isMobile && isTablet ? WebDesignImgTablet : (isMobile) ? WebDesignImgMobile : WebDesignImgDesktopLarge )}
+          altText={(!isMobile && isTablet ? 'web design tablet' : (isMobile) ? 'web design mobile' : 'web design desktop' )}
         />
         <CardLink
           title="App Design"
           subtitle="view projects"
-          className="cardLink row-span-1 bg-app-design md:bg-app-design-tablet sm:bg-app-design-mobile"
+          className="cardLink row-span-1"
           link="./app-design"
+          image={(!isMobile && isTablet ? AppDesignImgTablet : (isMobile) ? AppDesignImgMobile : AppDesignImgDesktop )}
+          altText={(!isMobile && isTablet ? 'app design tablet' : (isMobile) ? 'app design mobile' : 'app design desktop' )}
         />
         <CardLink
           title="Graphic Design"
           subtitle="view projects"
-          className="cardLink row-span-1 bg-graphic-design md:bg-graphic-design-tablet sm:bg-graphic-design-mobile"
+          className="cardLink row-span-1  "
           link="./graphic-design"
+          image={(!isMobile && isTablet ? graphicDesignTablet : (isMobile) ? graphicDesignMobile : graphicDesignDesktop )}
+          altText={(!isMobile && isTablet ? 'graphic design tablet' : (isMobile) ? 'graphic design mobile' : 'graphic design desktop' )}
         />
       </div>
 

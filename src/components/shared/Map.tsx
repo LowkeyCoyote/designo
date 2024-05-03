@@ -1,5 +1,5 @@
 import { MapContainer, TileLayer, Marker } from 'react-leaflet';
-import useIsMobile from '@hooks/useIsMobile';
+import useIsTablet from '@hooks/useIsTablet';
 
 type MapProps = {
   latitude: number;
@@ -7,14 +7,14 @@ type MapProps = {
 };
 
 const Map = ({ latitude, longitude }: MapProps) => {
-  let isMobile = useIsMobile();
+  let isTablet = useIsTablet();
   return (
     <MapContainer
       center={[latitude, longitude]}
       zoom={12}
       scrollWheelZoom={false}
       zoomControl={false}
-      dragging={isMobile ? false : true}
+      dragging={isTablet ? false : true}
     >
       <TileLayer url="https://tile.openstreetmap.org/{z}/{x}/{y}.png" />
       <Marker position={[latitude, longitude]}/>

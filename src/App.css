@@ -104,8 +104,6 @@
   justify-content: center;
   gap: 1.5rem;
   border-radius: 0.5rem;
-  background-size: cover;
-  background-position: center;
 }
 
 .effectHoverCardLink::before {
@@ -123,10 +121,11 @@
   opacity: 0.5;
   transition-duration: 100ms;
   transition-timing-function: ease-in-out;
+  z-index: 999;
 }
 
 .cardLink {
-  min-height: 308px;
+  max-height: 308px;
   grid-column: span 1 / span 1;
 }
 
@@ -208,7 +207,7 @@
   .classicalPage {
     padding-left: 30px;
     padding-right: 30px;
-    margin-bottom: 330px;
+    margin-bottom: 384px;
   }
 
   .contactPage {

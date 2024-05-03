@@ -8,7 +8,7 @@ import Location from '@components/shared/Country';
 const ContactPage = () => {
   return (
     <section className="contactPage">
-        <ContactForm />
+      <ContactForm />
       <div className="align-center my-40 flex flex-row justify-between md:mt-32 md:flex-col md:gap-20">
         <Location location="Canada" image={CanadaImg} />
         <Location location="Australia" image={AustraliaImg} />
