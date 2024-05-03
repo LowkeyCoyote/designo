@@ -40,12 +40,12 @@ const CardLink = ({
           {subtitle}
         </p>
         <img
-          className="z-20 h-[50%]"
+          className="z-20 h-[50%] brightness-50 "
           src={iconRightArrow}
           alt="right arrow icon"
         />
       </div>
-      <img className="-z-2 absolute h-full w-full rounded-lg object-fill " src={image} alt={altText} />
+      <img className="-z-2 absolute h-full w-full rounded-lg object-fill brightness-50 " src={image} alt={altText} />
     </div>
   );
 };

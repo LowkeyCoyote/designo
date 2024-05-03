@@ -1,5 +1,15 @@
 import { MapContainer, TileLayer, Marker } from 'react-leaflet';
 import useIsTablet from '@hooks/useIsTablet';
+import icon from "leaflet/dist/images/marker-icon.png";
+import L from "leaflet"
+import "leaflet/dist/leaflet.css"
+
+let defaultIcon = L.icon({
+    iconUrl : icon
+})
+
+L.Marker.prototype.options.icon = defaultIcon;
+
 
 type MapProps = {
   latitude: number;
