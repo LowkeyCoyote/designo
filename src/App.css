@@ -67,12 +67,12 @@
 
 /* classes */
 
-/* transparent placeholder:text-white placeholder:text-opacity-50 border-b border-b-white pb-3 */
 .inputContact{
   background: transparent;
   border-bottom: 1px solid white;
   padding-bottom: 0.75rem;
-  
+  padding-left: 1rem;
+
 }
 
 .inputContact:focus{
@@ -82,7 +82,6 @@
 .inputContact::placeholder{
   color: white;
   opacity: 0.5;
-  padding-left: 1rem;
 }
 
 .card {

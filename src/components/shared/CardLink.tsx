@@ -15,6 +15,7 @@ const CardLink = ({ title, subtitle, className, link }: CardLinkProps) => {
     navigate(link);
   };
 
+
   return (
     <div
       onClick={redirectOnButtonClick}

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 const useIsMobile = () => {
-  const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth <= 640);
+  const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth <= 1024);
 
   useEffect(() => {
     const updateIsMobile = () => {

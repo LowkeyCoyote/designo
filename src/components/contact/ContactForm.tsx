@@ -28,7 +28,7 @@ const ContactForm = () => {
       <input
         className="inputContact"
         type="text"
-        placeholder="First name"
+        placeholder="Name"
         {...register('name', { required: true, maxLength: 80 })}
         aria-invalid={errors.name ? 'true' : 'false'}
       />
@@ -42,7 +42,7 @@ const ContactForm = () => {
       <input
         className="inputContact mt-6"
         type="text"
-        placeholder="Email"
+        placeholder="Email adress"
         {...register('email', { required: true, pattern: /^\S+@\S+$/i })}
         aria-invalid={errors.email ? 'true' : 'false'}
       />
@@ -62,7 +62,7 @@ const ContactForm = () => {
       <input
         className="inputContact mt-6"
         type="tel"
-        placeholder="Mobile number"
+        placeholder="Phone"
         {...register('number', { required: true, maxLength: 12 })}
         aria-invalid={errors.number ? 'true' : 'false'}
       />
@@ -75,7 +75,7 @@ const ContactForm = () => {
 
       <textarea
         className="inputContact mt-6 h-[102px]"
-        placeholder="Yourmessage"
+        placeholder="Your message"
         {...register('message', {
           required: true,
           max: 300,

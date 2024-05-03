@@ -1,4 +1,4 @@
-import { MapContainer, TileLayer } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker } from 'react-leaflet';
 import useIsMobile from '@hooks/useIsMobile';
 
 type MapProps = {
@@ -17,6 +17,8 @@ const Map = ({ latitude, longitude }: MapProps) => {
       dragging={isMobile ? false : true}
     >
       <TileLayer url="https://tile.openstreetmap.org/{z}/{x}/{y}.png" />
+      <Marker position={[latitude, longitude]}/>
+
     </MapContainer>
   );
 };
