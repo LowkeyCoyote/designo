@@ -18,7 +18,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="flex items-center justify-between px-[10.3125rem] py-16 uppercase tracking-wide text-dark-grey  md:px-[30px] sm:px-6 sm:py-[34px]">
+    <nav className="flex items-center justify-between px-[10.3125rem] py-16 uppercase tracking-wide text-dark-grey  md:px-[30px] sm:px-6 sm:py-[30px]">
       <Link to="./">
         <img
           src={logoDark}
@@ -27,7 +27,7 @@ const Navbar = () => {
         />
       </Link>
       <ul
-        className={`navLinks sm:tracking-wider ${showLink ? 'sm:top-[104px] sm:opacity-100 ' : 'sm:top-[-490px] sm:opacity-0 '}`}
+        className={`navLinks sm:tracking-wider ${showLink ? 'sm:top-[96px] sm:opacity-100 ' : 'sm:top-[-498px] sm:opacity-0 '}`}
       >
         {navLinks.map((link, index) => (
           <li

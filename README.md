@@ -34,4 +34,4 @@ npm run dev
 
 ## Live site
 
-[Live site](https://designo-lowkey-coyote.netlify.app/graphic-design)
+[Live site](https://designo-lowkey-coyote.netlify.app)

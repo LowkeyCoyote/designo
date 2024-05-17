@@ -45,7 +45,7 @@ const CardLink = ({
           alt="right arrow icon"
         />
       </div>
-      <img className="-z-2 absolute h-full w-full rounded-lg object-fill brightness-50 " src={image} alt={altText} />
+      <img className="-z-2 absolute h-full w-full rounded-lg object-cover brightness-50 " src={image} alt={altText} />
     </div>
   );
 };
