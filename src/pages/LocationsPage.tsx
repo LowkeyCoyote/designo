@@ -1,9 +1,16 @@
-import LocationContainer from '@components/locations/LocationContainer'
-import { longAustraliaOffice, latAustraliaOffice, longCanadaOffice, latCanadaOffice, latUKOffice, longUKOffice } from '@const/coor'
+import LocationContainer from '@components/locations/LocationContainer';
+import {
+  longAustraliaOffice,
+  latAustraliaOffice,
+  longCanadaOffice,
+  latCanadaOffice,
+  latUKOffice,
+  longUKOffice,
+} from '@const/coor';
 
 const LocationsPage = () => {
   return (
-    <section className='classicalPage '>
+    <section className="classicalPage ">
       <LocationContainer
         country="Canada"
         office="Designo Central Office"
@@ -28,7 +35,7 @@ const LocationsPage = () => {
       <LocationContainer
         country="United Kingdom"
         office="Designo UK Office"
-        adressStreet="13  Colorado Way" 
+        adressStreet="13  Colorado Way"
         adressCity="Rhyd-y-fro SA8 9GA"
         telephone="P : 078 3115 1400"
         mail="M : contact@designo.uk"
@@ -36,7 +43,7 @@ const LocationsPage = () => {
         longitude={longUKOffice}
       />
     </section>
-  )
-}
+  );
+};
 
-export default LocationsPage
+export default LocationsPage;

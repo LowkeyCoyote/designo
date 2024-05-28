@@ -4,10 +4,10 @@ import Location from '@components/shared/Country';
 
 import worldClassImgDesktop from '@assets/about/image-world-class-talent-desktop.jpg';
 import worldClassImgMobile from '@assets/about/image-world-class-talent-mobile.jpg';
-import worldClassImgTablet from '@assets/about/image-world-class-talent-tablet.jpg'
+import worldClassImgTablet from '@assets/about/image-world-class-talent-tablet.jpg';
 
 import realDealImgDesktop from '@assets/about/image-real-deal-desktop.jpg';
-import realDealImgTablet from '@assets/about/image-about-hero-tablet.jpg'
+import realDealImgTablet from '@assets/about/image-about-hero-tablet.jpg';
 import realDealImgMobile from '@assets/about/image-real-deal-mobile.jpg';
 
 import AustraliaImg from '@assets/shared/illustration-australia.svg';
@@ -25,7 +25,6 @@ const AboutPage = () => {
         imageDesktop={worldClassImgDesktop}
         imageTablet={worldClassImgTablet}
         imageMobile={worldClassImgMobile}
-      
         className="flex-row-reverse"
       />
 

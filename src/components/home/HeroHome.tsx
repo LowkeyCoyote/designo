@@ -6,15 +6,12 @@ const HeaderHome = () => {
   return (
     <div className="relative flex overflow-hidden rounded-2xl bg-peach md:min-w-full sm:rounded-none">
       <div className="fadeInLeft flex w-[60%] flex-col px-24 py-32 md:w-full md:px-20 md:pb-[470px] md:pt-12 md:text-center  sm:px-6  ">
-        <h1 className="mb-9 text-white sm:mb-4 z-10">
-          Award-winning custom designs and digital branding solutions
-        </h1>
-        <p className="mb-9 text-white sm:mb-4 z-10">
-          With over 10 years in the industry, we are experienced in creating
-          fully responsive websites, app design, and engaging brand experiences.
-          Find out more about our services.
+        <h1 className="z-10 mb-9 text-white sm:mb-4">Award-winning custom designs and digital branding solutions</h1>
+        <p className="z-10 mb-9 text-white sm:mb-4">
+          With over 10 years in the industry, we are experienced in creating fully responsive websites, app design, and
+          engaging brand experiences. Find out more about our services.
         </p>
-        <Button link="./about" className="md:mx-auto tracking-wide z-10">
+        <Button link="./about" className="z-10 tracking-wide md:mx-auto">
           Learn More
         </Button>
       </div>
@@ -25,11 +22,7 @@ const HeaderHome = () => {
           alt=""
         />
       </div>
-      <img
-        src={BgPatternHeroHome}
-        className="absolute right-0 md:invisible md:top-24 sm:visible"
-        alt=""
-      />
+      <img src={BgPatternHeroHome} className="absolute right-0 md:invisible md:top-24 sm:visible" alt="" />
     </div>
   );
 };

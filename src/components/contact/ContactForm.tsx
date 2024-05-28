@@ -21,10 +21,7 @@ const ContactForm = () => {
   const onSubmit = () => window.location.reload();
 
   return (
-    <form
-      className="flex flex-[0_9_40%] flex-col text-white md:w-full md:flex-none"
-      onSubmit={handleSubmit(onSubmit)}
-    >
+    <form className="flex flex-[0_9_40%] flex-col text-white md:w-full md:flex-none" onSubmit={handleSubmit(onSubmit)}>
       <input
         className="inputContact"
         type="text"
