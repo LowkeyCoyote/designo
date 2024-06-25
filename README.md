@@ -5,6 +5,15 @@
 Challenge carried out with the mentor frontend site.  
 The objective was to integrate as precisely as possible the Figma model that I had available.
 
+## Preview/design
+
+![image](https://i.imgur.com/v6DHegN.png)
+
+![image](https://i.imgur.com/czCDmIJ.png)
+
+![image](https://i.imgur.com/Z6x3KUS.png)
+
+
 ## Main technologies and packages
 
 - React
